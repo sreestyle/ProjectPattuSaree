@@ -1,0 +1,392 @@
+﻿html, body {
+    margin: 0;
+    height: 100%;
+    background-color:whitesmoke;
+    overflow-x:hidden
+}
+
+
+
+.bars {
+    position: fixed;
+    top: 1%;
+    left: 1%;
+}
+
+.side-bar {
+    margin: 0%;
+    padding: 0%;
+    top: 0%;
+    position: fixed;
+    left: -15%;
+    width: 15%;
+    height: 100%;
+    background-color: #ffca18;
+    transition: left 1s;
+    overflow: hidden;
+}
+
+
+.main-bar {
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    transition: width 2s;
+}
+
+.main-ani {
+    animation-name: example;
+    animation-duration: 4s;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+
+.side-menu-open {
+    left: 0%;
+}
+
+.side-menu-close {
+    left: -15%
+}
+
+div.menu-icon {
+    /* border-radius: 50%; */
+   
+    left: 10px;
+    top: 5px;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 4px 0;
+    transition: left 1s;
+}
+
+.start-default {
+    position: absolute;
+    width: 7%;
+    top: 45%;
+    left: 100%;
+    border-radius: 15%;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    animation-name: startani;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes startani {
+    from {
+        position: absolute;
+        width: 7%;
+        top: 45%;
+        right: 80%;
+        border-radius: 15%;
+        background-color: white;
+        border-color: black;
+        border-width: 1px;
+        opacity: 0;
+    }
+
+    to {
+        position: absolute;
+        width: 7%;
+        top: 45%;
+        left: 45%;
+        border-radius: 15%;
+        background-color: white;
+        border-color: black;
+        border-width: 1px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes example {
+    from {
+        position: absolute;
+        width: 7%;
+        top: 45%;
+        left: 45%;
+        display: block;
+        border-radius: 15%;
+        background-color: white;
+        border-color: black;
+        border-width: 1px;
+    }
+
+    to {
+        position: absolute;
+        width: 5%;
+        top: 5%;
+        left: 45%;
+        display: none;
+        border-radius: 20%;
+        background-color: red;
+        border-color: black;
+        opacity: 0;
+    }
+}
+
+.menu-container {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height:75%;
+    overflow-y:scroll;
+   
+}
+.menu-container::-webkit-scrollbar {
+        display: none;
+    }
+.menu-container {
+    -ms-overflow-style: none;
+}
+.menu-container {
+    overflow: -moz-scrollbars-none;
+}
+
+    .menu-container ul {
+        padding: 8px;
+        text-decoration: none;
+    }
+
+    .menu-container li {
+        position: relative;
+        padding: 0px;
+        margin:0px;
+        /* font-size: 25px; */
+        color: black;
+        display: block;
+        /* opacity: 0; */
+    }
+
+        .menu-container li a {
+            position: relative;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            margin-left: 0px;
+            margin-right: 0px;
+            text-decoration: none;
+            color: black;
+            left: 0%;
+            opacity: 1;
+            text-align: center;
+            display: grid;
+            
+        }
+
+
+.side-cross {
+    position: absolute;
+    top: 1%;
+    left: 88%;
+}
+
+.menu-container li {
+    transition: background-color 1s
+}
+
+.menu-container li:hover{
+    background-color:whitesmoke
+}
+.menu-container ul {
+    margin:0px;
+    padding:0px;
+}
+
+.news-frame {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 60%;
+    height: 50%;
+    border: none;
+    box-shadow: 5px 40px 30px #888888;
+}
+
+.newspanel{
+    position:absolute;
+    left:14%;
+    top:75%;
+    width:74%;
+    height:100%;
+    /*background-color:azure*/
+}
+
+.newspanel ul {
+        text-decoration: none;
+        align-items: center;
+        list-style: none;
+       
+ }
+
+    .newspanel ul li {
+        display: inline-block;
+        margin: 15px;
+        margin-bottom: 5%;
+        width:30%;
+    }
+
+.content-container {
+    position: relative;
+    width: 80%;
+    border: 1px solid #c0c1bd;
+    display: inline-block;
+    /*border-radius: 2%;*/
+    background-color: whitesmoke;
+    box-shadow: 5px 25px 30px #888888;
+    transition: border-bottom-left-radius 1s;
+}
+.content-img {
+    position: relative;
+    margin: 0%;
+    width: 100%;
+    text-align: center;
+    border: none;
+    box-shadow: 5px 30px 30px #888888;
+    width: 125%;
+    height: 110%;
+    left: -12%;
+    z-index: 1;
+}
+.content-news {
+    position: relative;
+    width: 90%;
+    height: 160px;
+    margin: 5%;
+    padding-top: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: #f4c842;
+    border-radius:3%;
+}
+
+/*.content-img:hover {
+    box-shadow: 5px 30px 30px #888888;
+    width: 110%;
+    height: 110%;
+    left:-5%;
+    z-index: 1;
+}*/
+.content-container:hover {
+    border-bottom-left-radius:15%;
+
+   
+}
+
+.content-news p {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+    
+}
+
+.content-news p::-webkit-scrollbar {
+    display: none;
+}
+
+.content-news p {
+    -ms-overflow-style: none;
+}
+
+.content-news p {
+    overflow: -moz-scrollbars-none;
+}
+
+.login {
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    background-color: whitesmoke;
+    top: 20%;
+    left: 105%;
+    z-index: 3000000;
+    box-shadow: 5px 30px 30px black;
+    border: 2px solid #f4c842;
+    border-radius: 4px;
+    transition: left 1.5s, width 1s,height 1.5s;
+}
+
+.login-slide-in{
+    left:40%;
+    width:22%;
+    height:65%;
+}
+.user {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: linear-gradient(#eeefef, #ffffff 10%);
+}
+
+.password {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+   
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.singin {
+    top: 70%;
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    border: none;
+    height: 10%;
+    background-color: #f4c842;
+    
+}
+
+.singin:hover{
+
+}
+
+
+/*.login input::placeholder {
+    opacity: 0.7; 
+    box-shadow: 5px 30px 30px black;
+}
+
+.login input:-ms-input-placeholder { 
+    color: #f4c842;
+    opacity: 0.5;
+}
+
+.login input::-ms-input-placeholder { 
+    color: #f4c842;
+    opacity: 0.5;
+}*/
+
